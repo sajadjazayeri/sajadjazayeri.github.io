@@ -1,0 +1,243 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2013 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,roman]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% modern themes
+\moderncvstyle{banking}                            % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                                % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}
+\usepackage{fontawesome}
+\usepackage{tabularx}
+\usepackage{ragged2e}
+% if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.808]{geometry}
+\usepackage{multicol}
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+\usepackage{import}
+
+% personal data
+\name{Sajad}{Jazayeri}
+% \title{Curriculum Vitae}                               % optional, remove / comment the line if not wanted
+%\address{5829 Hobart Street, Pittsburgh, PA 15213 }{}{}% optional, remove / comment the line if not wanted; the "postcode city" and and "country" arguments can be omitted or provided empty
+% \phone[mobile]{909-839-3097}                   % optional, remove / comment the line if not wanted
+% \phone[fixed]{01234 123456}                    % optional, remove / comment the line if not wanted
+%\phone[fax]{+3~(456)~789~012}                      % optional, remove / comment the line if not wanted
+% \email{xpan1@swarthmore.edu}                               % optional, remove / comment the line if not wanted
+% \homepage{shawnpan.me}                         % optional, remove / comment the line if not wanted
+% \extrainfo{}                 % optional, remove / comment the line if not wanted
+%\photo[64pt][0.4pt]{picture}                       % optional, remove / comment the line if not wanted; '64pt' is the height the picture must be resized to, 0.4pt is the thickness of the frame around it (put it to 0pt for no frame) and 'picture' is the name of the picture file
+%\quote{Some quote}                                 % optional, remove / comment the line if not wanted
+
+% to show numerical labels in the bibliography (default is to show no labels); only useful if you make citations in your resume
+%\makeatletter
+%\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}
+%\makeatother
+%\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}% CONSIDER REPLACING THE ABOVE BY THIS
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+
+\newcommand*{\customcventry}[7][.25em]{
+	\begin{tabular}{@{}l} 
+		{\bfseries #4}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\bfseries #5}
+	\end{tabular} \\
+	\begin{tabular}{@{}l} 
+		{\itshape #3}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\itshape #2}
+	\end{tabular}
+	\ifx&#7&%
+	\else{\\%
+		\begin{minipage}{\maincolumnwidth}%
+			\small#7%
+	\end{minipage}}\fi%
+	\par\addvspace{#1}}
+
+\newcommand*{\customcvproject}[4][.25em]{
+	%   \vfill\noindent
+	\begin{tabular}{@{}l} 
+		{\bfseries #2}
+	\end{tabular}
+	\hfill% move it to the right
+	\begin{tabular}{l@{}}
+		{\itshape #3}
+	\end{tabular}
+	\ifx&#4&%
+	\else{\\%
+		\begin{minipage}{\maincolumnwidth}%
+			\small#4%
+	\end{minipage}}\fi%
+	\par\addvspace{#1}}
+
+\setlength{\tabcolsep}{12pt}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+	\makecvtitle
+	\vspace*{-19mm}
+	
+	\begin{center}
+		\begin{tabular}{ c c c c }
+			\faEnvelopeO\enspace sajad.jazayeri@gmail.com &  \faMobile\enspace (813)362-9299\\  
+		\end{tabular}
+	\end{center}
+
+	\vspace*{-5mm}
+	\section{HIGHLIGHTS}
+	A highly skilled self-motivated geophysicist with a PhD in Geology, creative, innovative and independent thinker and multitasking team player with a strong background in \textbf{programming,  signal processing, Geophysical data analysis, Modelling and Inversion}, quantitative interpretation, \textbf{Artificial Intelligence (AI) and Machine Learning (ML)}. I also have 5 years of industry experience.
+	% modelling and imaging and understanding subsurface complexity using interdisciplinary data and projects. I enjoy working with data, I love learning, problem solving and investigating new technologies. Team player and motivated by challenges. Always looking for the imposible to make it possible.
+	%Machine learning and the use of statistical approaches to make the geophysical processing automatic is another area of my interest.
+	
+	\section{CORE SKILLS}
+	{\begin{itemize}
+			\item \textbf{Management}: Solution-oriented, Independent, Time-delivery, Decisive, Disciplined, Structured, Objective prioritizing
+			\item \textbf{Geophysics}: Exploration Seismology, Electromagnetics (EM), Ground Penetrating Radar (GPR), gravity, Magnetic, Electrical Resistivity, GPS
+			\item \textbf{Modelling}: 2D and 3D modelling, Inversion, Imaging, Velocity structure modelling, full-waveform inversion (FWI), attribute analysis
+			\item \textbf{Software}: Geosoft Oasis Montaj, AarhusINV, Aarhus workbench, ArcGIS, PEST, SMT Kingdom Suite, Global Mapper, Hampson Russel
+			\item \textbf{Programming}: MATLAB, Python, R, P5
+			\item \textbf{Relevant courses}: Potential field data processing, Optimization, Project management, Statistical data mining, Basic programming in UNIX systems, Web design using HTML
+		\end{itemize}
+	}
+
+	
+	\section{EDUCATION}
+{\customcventry{May 2019}{PhD in Geophysics. GPA: 3.64/4, Thesis: FWI of high-frequency electromagnetic GPR data}{University of South Florida}{Tampa, FL}{}{}}
+
+{\customcventry{August 2009}{MSc in Geophysics. GPA: 16.63/20, Thesis: 3D Geomagnetic data modelling}{University of Tehran}{Tehran, Iran}{}{}}
+
+{\customcventry{August 2007}{BSc in Physics, solid state. GPA: 16.12/20}{Razi University}{Kermanshah, Iran}{}{}}
+	
+	
+		
+		\section{EMPLOYMENT AND RESEARCH EXPERIENCE}
+		
+			{\customcventry{August 2014 - Present}{Graduate Assistant}{School of Geosciences, University of South Florida}{Tampa, FL}{}
+				{\begin{itemize}
+				\item Developed modelling and inversion codes for time-series data. The established full-waveform inversion method improves subsurface model resolution by 78\%.
+				\item Developed a full-waveform inversion software package for surface GPR data
+				\item Created a Sparse blind deconvolution for noise reduction and source wavelet optimization of electromagnetic and seismic signals 
+				\item Modelled and Inverted Airborne Electromagnetic data (AEM) for earth modelling
+				\item Extensive data analysis, modelling and interpretation of EM, Electrical resistivity, Gravity, magnetic, LiDAR and GPS data 
+				\item Developed machine learning algorithms for automatic anomaly detection, using Power Spectral Density (PSD) and Dynamic Time Warping (DTW)
+				\end{itemize}
+			}
+		
+			{\customcventry{August 2012 - August 2014}{Research Geophysicist}{Kian Rayan Co.}{Tehran, Iran}{}
+			{\begin{itemize}
+					\item Established and developed new data processing codes and platforms resulting in average 60\% decrease in data processing required-time
+					\item Developed and restructured customer software training program and presented it to 12 different customer firms, resulting in a 85\% increase in customer satisfaction levels
+					\item Performed code performance evaluation and debugged the codes
+					\item Presented research results in two expositions resulting in 18\% costumer increase  
+				\end{itemize}
+			}
+		
+			{\customcventry{September 2009 - August 2012}{Geophysicist}{}{}{}
+			{\begin{itemize}
+					\item Processed and modelled geophysical data (reflection and refraction Seismic, prestack and poststack seismic data, Magnetics, EM, GPR and MT)
+					\item Interpreted and analyzed different data and prepared reports	
+				\end{itemize}
+			}
+		
+			{\customcventry{December 2008 - August 2009}{Research Assistant}{Institute of Geophysics, University of Tehran}{Tehran, Iran}{}
+			{\begin{itemize}
+					\item Potential field data modelling at Semnan basin (sponsored by the National Iranian Oil Company, NIOC)
+				\end{itemize}
+			}
+		
+		{\customcventry{October 2008 - December 2008}{Intern}{Geological Survey and Mineral Exploration of Iran}{Tehran, Iran}{}
+			{\begin{itemize}
+					\item Processed the data of two actual projects under supervision of a senior geophysicist and prepared reports
+					\item Communicated with principal geophysicists and team leaders to identify the instrumentation gaps and needs	
+				\end{itemize}
+			}
+
+			
+		
+		\section{SELECTED AWARDS AND ACHIEVEMENTS}
+\begin{minipage}{\maincolumnwidth}%
+	\small{
+		\begin{itemize}
+			\item 2019 Richard A. Davis, Jr. (RAD) Endowed Fellowship in Geology Research, USF		
+			\item 2018 Dissertation completion Fellowship, USF Office of Graduate Studies
+			\item 2017 Recognized as one of the top presented 39 papers in SEG annual meeting 2017, Houston, TX
+			\item 2017 American Society of Civil Engineers (ASCE) Trent Dames and William Moore Fellowship 
+			\item 2015, 2016, 2018 USF School of Geosciences Tharp Research Fellowship, USF
+			\item 2015 Sigma Xi GIAR (Grants-in-Aid of Research) award 
+			\item 2009 National Iranian Oil Company Graduate Research Fellowship 
+			
+	\end{itemize}}
+\end{minipage}
+
+
+\section{LEADERSHIP AND INVOLVEMENT}
+\begin{itemize}
+	
+	\item Technical program committee member, SEG 2018 Annual meeting, Anaheim, CA
+	\item Member of SEG near surface technical session leadership board and Media Leader (since 2017) 
+	\item President of the Iranian Student Association at USF (2017-2018)
+	\item Co-organizer and primary chair for multiple sessions at AGU and SEG meetings since 2017
+	\item Journal reviewer: \textit{Geophysics}; \textit{The Leading Edge}; \textit{Near Surface Geophysics}; \textit{Journal of Geophysics and Engineering}; \textit{Journal of Environmental \& Engineering Geophysics}, \textit{Remote Sensing}; \textit{Journal of Applied Geophysics}; \textit{International Journal of Speleology}; \textit{Arabian Journal of Geosciences}. Conference reviewer: \textit{SEG annual meetings (since 2017)}, \textit{AGU (since 2017)}, \textit{IEEE (2018)}
+	
+\end{itemize}
+
+\vspace*{-1mm}
+\section{SELECTED PUBLICATIONS}              
+\begin{enumerate}
+	\item \textbf{S. Jazayeri}, N. Kazemi, S. Kruse. (2019). Sparse Blind Deconvolution of Ground Penetrating Radar data. In: IEEE Transactions on Geoscience and Remote Sensing. DOI: 10.1109/TGRS.2018.2886741
+	
+	\item \textbf{S. Jazayeri}, A. Saghafi, S. Esmaeili, C.P. Tsokos. (2019). Online Object Detection using Dynamic Time Warping on Common-Offset Ground Penetrating Radar. In: Expert Systems With Applications, Elsevier, Vol. 122, pp. 102-107. DOI: 10.1016/j.eswa.2018.12.057 
+	
+	\item A. Saghafi, \textbf{S. Jazayeri}, S. Esmaeili, C. Tsokos. (2019). Power Spectral Density to Radar online Object Detection In: Structural Control and Health Monitoring, Elsevier, DOI: 10.1002/stc.2354.
+	
+	\item \textbf{S. Jazayeri}, A. Klotzsche and S. Kruse. (2018). Improved resolution of pipes with full waveform inversion of common-offset GPR data using PEST. In: Geophysics, 83(4), H27-H41. 
+	
+	\item S., Kruse,  \textbf{S. Jazayeri}. (2016). Evaluating potential benefits of improved understanding of uncertainties associated with airborne electromagnetic (AEM) data in Eastern Nebraska. 101 pp.
+	
+\end{enumerate}
+
+\vspace*{-2mm}
+\section{PATENTS}
+\begin{enumerate}
+	
+	\item \textbf{S., Jazayeri}, S., Kruse. (2019). Precise Infrastructure Mapping Using Full-Waveform Inversion of Radar Signals. Filed Jun 27, 2018, United States Patent and Trademark Office, Non-Provisional patent number: 10,234,552 (Granted on Mar 19 2019).
+		
+	\item A., Saghafi, \textbf{S. Jazayeri}, S., Esmaeili, C. Tsokos. (2019). Systems and Methods For Detecting Buried Objects. Filed Jun 28, 2018, United States Patent and Trademark Office, Non-Provisional patent number: 10,175,350 (Granted on Jan 8 2019)	
+	
+\end{enumerate}
+%-----       letter       ---------------------------------------------------------
+
+\end{document}
+
+
+%% end of file `template.tex'.
